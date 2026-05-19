@@ -5,10 +5,10 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
-            <a class="nav-link" active-class="active" to="/filmes">Filmes</a>
+            <RouterLink class="nav-link" active-class="active" to="/filmes">Filmes</RouterLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" active-class="active" to="/diretores">Diretores</a>
+            <RouterLink class="nav-link" active-class="active" to="/diretores">Diretores</RouterLink>
           </li>
         </ul>
       </div>

@@ -31,9 +31,9 @@
           <td>{{ d.nacionalidade }}</td>
           <td>{{ d.idade }}</td>
           <td>
-            <a :to="`/diretores/${d.idDiretor}`" class="btn btn-sm btn-outline-info me-1">
+            <RouterLink :to="`/diretores/${d.idDiretor}`" class="btn btn-sm btn-outline-info me-1">
               Ver
-            </a>
+            </RouterLink>
             <button class="btn btn-sm btn-outline-warning me-1" @click="abrirModal(d)">Editar</button>
             <button class="btn btn-sm btn-outline-danger" @click="excluir(d.idDiretor)">Excluir</button>
           </td>

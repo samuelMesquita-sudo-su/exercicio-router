@@ -48,9 +48,9 @@
             <td>{{ filme.ano }}</td>
             <td>{{ filme.duracao }} min</td>
             <td>
-              <a :to="`/filmes/${filme.idFilme}`" class="btn btn-sm btn-outline-info">
+              <RouterLink :to="`/filmes/${filme.idFilme}`" class="btn btn-sm btn-outline-info">
                 Ver
-              </a>
+              </RouterLink>
             </td>
           </tr>
         </tbody>
@@ -66,14 +66,19 @@ import { diretorService } from '@/services/api'
 import type Diretor from '@/interfaces/Diretor'
 import type Filme from '@/interfaces/Filme'
 
+import { useRoute, useRouter } from 'vue-router'
 
 const diretor = ref<Diretor | null>(null)
 const filmes = ref([] as Filme[])
 const loading = ref(true)
 const erro = ref('')
 
-function voltar() {
+const route = useRoute()
 
+const router = useRouter()
+
+function voltar() {
+  router.push('/diretores')
 }
 
 onMounted(async () => {
