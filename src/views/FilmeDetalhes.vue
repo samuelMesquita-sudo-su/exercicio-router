@@ -59,7 +59,7 @@ const route = useRoute()
 const router = useRouter()
 
 function voltar() {
-  router.push('/filmes')
+  router.back()
 }
 
 onMounted(async () => {

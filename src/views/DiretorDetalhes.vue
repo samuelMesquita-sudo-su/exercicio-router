@@ -78,13 +78,13 @@ const route = useRoute()
 const router = useRouter()
 
 function voltar() {
-  router.push('/diretores')
+  router.back()
 }
 
 onMounted(async () => {
   try {
     //preencher id com parâmetro da rota
-    const id = "1"
+    const id = route.params.id //"1"
     const res = await diretorService.getById(id)
     const response = await diretorService.getFilmesByDiretor(id)
     diretor.value = res.data
